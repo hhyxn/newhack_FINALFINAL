@@ -1,0 +1,39 @@
+{% extends '_layout.html' %} {% block title %}Password Generation{% endblock %}
+{% block head %} {% endblock %} {% block body %}
+
+<h3>
+  Need a strong password? We can help you generate a strong password based on
+  three pieces of unique information from your life.
+</h3>
+<h3>
+  Having trouble remembering these passwords? We can generate a "password story"
+  to help jog your memory on specific elements of your password!
+</h3>
+
+<form action="/passgenerate" method="POST" class="q-container">
+  <div class="form-group">
+    <label for="q1">Who is one person you think about the most?</label>
+    <input type="text" name="q1" id="q1" placeholder="Enter here" required />
+  </div>
+  <br />
+  <div class="form-group">
+    <label for="q2"
+      >What is the best thing to do when you have free time?</label
+    >
+    <input type="text" name="q2" id="q2" placeholder="Enter here" required />
+  </div>
+  <br />
+  <div class="form-group">
+    <label for="q3"
+      >What is a sign or a number that is distinct and unique to you?</label
+    >
+    <input type="text" name="q3" id="q3" placeholder="Enter here" required />
+  </div>
+  <br />
+  <input type="submit" value="Submit" />
+</form>
+{% if pwd %}
+<h3 class="text-center">Your suggested password is {{ pwd }}</h3>
+{% endif %} {% if stry %}
+<h3 class="text-center">{{ stry }}</h3>
+{% endif %} {% endblock %}

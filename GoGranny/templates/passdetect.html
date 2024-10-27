@@ -1,0 +1,45 @@
+{% extends '_layout.html' %} {% block title %}Password Detection{% endblock %}
+{% block head %}
+<style>
+  .password-container {
+    margin: 20px;
+  }
+
+  .password-label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .password-input {
+    font-size: 24px;
+    padding: 10px;
+    width: 300px;
+    box-sizing: border-box;
+  }
+</style>
+{% endblock %} {% block body %}
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Password Input</title>
+<form action="/passdetect" method="POST" class="password-container">
+  <h3>Is your password safe? Let us help you check!</h3>
+
+  <label
+    style="
+      font-family: 'Helvetica Bold', sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+    "
+    for="password"
+    class="password-label"
+    >Password:</label
+  >
+  <input name="password" type="password" id="password" class="password-input" />
+  <button type="submit">Submit</button>
+  <!--<button style="font-family: 'Helvetica Bold', sans-serif; font-size: 20px; font-weight: bold;" onClick="handleEvent()">Check</button>-->
+</form>
+{% if predict %}
+<h3 class="text-center">Password is {{ predict }}</h3>
+{% endif %} {% endblock %}

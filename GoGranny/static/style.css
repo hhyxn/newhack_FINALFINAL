@@ -1,0 +1,76 @@
+body{
+    background-color: rgb(146, 188, 255);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Helvetica Bold', sans-serif;
+    font-size: 20px;
+}
+
+h1{/*for main title*/
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 60px;
+}
+
+h2{ /* for subtitles in Homepage*/
+    text-align: center;
+    font-family: 'Helvetica Bold', sans-serif;
+    font-size: 40px;
+    font-style: italic;
+}
+
+h3{ /* for descriptions*/
+    text-align: left;
+    font-family: 'Helvetica Bold', sans-serif;
+    font-size: 30px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .nav-right {
+    margin-left: auto;
+  }
+  
+  .nav-right img {
+    display: block;
+}
+
+.navbar ul{
+    list-style-type: none;
+    /*add background here*/
+    padding: 5px;
+    margin: 5px;
+    overflow: hidden;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 30px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 30px;
+}
+
+.navbar a:hover{
+    background-color: rgb(71, 116, 189);
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 30px;
+    border-radius: 40px;
+}
+
+.navbar li{
+    float: left;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 30px;
+}

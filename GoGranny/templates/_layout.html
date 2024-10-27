@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <style>
+      .horizontal-line {
+        border: none; /* Remove default border */
+        height: 5px; /* Set thickness of the line */
+        background-color: #000000; /* Set the color of the line */
+        width: 100%; /* Full width of the container */
+        margin: 20px 0; /* Add space above and below the line */
+      }
+      
+      .image-container {
+          text-align: right;
+          
+        }
+    </style>
+
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <!-- Other navigation items go here -->
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/passdetect">Password Detection</a></li>
+          <li><a href="/passgenerate">Password Generation</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-right">
+        <img
+          src="static/logo.png"
+          alt="Remember Granny Logo"
+          width="100"
+          height="100"
+        />
+      </div>
+      
+    </nav>
+
+   
+
+    <h1>Remember Granny</h1>
+<h2>Protect your passwords like you protect your children!</h2>
+
+
+
+<div class="horizontal-line"></div>
+{% block body %}
+{% endblock %}
+
+</html>
